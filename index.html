@@ -8,6 +8,9 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
 /* GENERAL */
 html{
@@ -45,7 +48,7 @@ nav a{
     transition: color 0.3s;
 }
 nav a:hover{
-    color:#1e40af; /* NTU blue-ish accent */
+    color:#1e40af; /* NTU blue accent */
 }
 
 /* HERO */
@@ -59,7 +62,7 @@ nav a:hover{
 .hero h1{
     font-size:50px;
     margin-bottom:10px;
-    color:#1e3a8a; /* deeper blue for professional emphasis */
+    color:#1e3a8a; /* heading blue */
 }
 .subtitle{
     font-size:22px;
@@ -84,6 +87,10 @@ h2{
     padding-bottom:8px;
     color:#1e3a8a;
 }
+h2 i{
+    color:#2563eb; /* subtle icon color */
+    margin-right:8px;
+}
 p{
     margin-bottom:16px;
 }
@@ -97,6 +104,9 @@ p{
     border:1px solid #e2e8f0;
     box-shadow:0 3px 6px rgba(0,0,0,0.05);
 }
+.card strong{
+    color:#1e3a8a;
+}
 
 /* SKILLS GRID */
 .skills{
@@ -105,12 +115,17 @@ p{
     gap:15px;
 }
 .skill{
-    background:white;
-    border:1px solid #e2e8f0;
+    background:#ffffff;
+    border:1px solid #cbd5e1;
     padding:16px;
     border-radius:10px;
     text-align:center;
     font-weight:500;
+    transition: transform 0.2s, background 0.2s;
+}
+.skill:hover{
+    transform: translateY(-3px);
+    background:#f1f5f9;
 }
 
 /* CONTACT */
@@ -171,7 +186,7 @@ I am passionate about leveraging technology to solve real-world problems and imp
 
 <!-- ABOUT -->
 <section id="about">
-<h2>About Me</h2>
+<h2><i class="fas fa-user"></i> About Me</h2>
 <p>
 I am a detail-oriented and adaptable graduate with a solid foundation in business concepts and technological applications. My diploma education strengthened my analytical thinking, problem-solving abilities, and capacity to approach challenges from multiple perspectives.
 </p>
@@ -182,7 +197,7 @@ I enjoy working on meaningful projects that require critical thinking and struct
 
 <!-- INTERNSHIP -->
 <section id="internship">
-<h2>Internship Experience</h2>
+<h2><i class="fas fa-briefcase"></i> Internship Experience</h2>
 <div class="card">
 <strong>Application Support Intern — NCS Hub, Ang Mo Kio</strong>
 <p>
@@ -200,7 +215,7 @@ During my internship, I supported enterprise applications by assisting in incide
 
 <!-- ACADEMIC -->
 <section id="academic">
-<h2>Academic Background</h2>
+<h2><i class="fas fa-graduation-cap"></i> Academic Background</h2>
 <div class="card">
 <strong>Diploma in Business & Financial Technology</strong><br>
 Nanyang Polytechnic
@@ -213,7 +228,7 @@ My academic training provided interdisciplinary exposure to financial systems, b
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2>Selected Projects</h2>
+<h2><i class="fas fa-project-diagram"></i> Selected Projects</h2>
 <div class="card">
 <strong>QuickHire – Recruitment Platform</strong>
 <p>Developed a prototype recruitment platform aimed at improving hiring efficiency through intuitive navigation and user-focused design.</p>
@@ -230,7 +245,7 @@ My academic training provided interdisciplinary exposure to financial systems, b
 
 <!-- SKILLS -->
 <section id="skills">
-<h2>Skills</h2>
+<h2><i class="fas fa-lightbulb"></i> Skills</h2>
 <div class="skills">
 <div class="skill">HTML, CSS, JavaScript</div>
 <div class="skill">Python (Foundational)</div>
@@ -243,7 +258,7 @@ My academic training provided interdisciplinary exposure to financial systems, b
 
 <!-- VISION -->
 <section id="vision">
-<h2>Academic & Career Aspirations</h2>
+<h2><i class="fas fa-bullseye"></i> Academic & Career Aspirations</h2>
 <p>
 I aspire to further my education in a dynamic university environment to deepen my technological expertise and broaden my understanding of digital transformation.
 </p>
@@ -254,7 +269,7 @@ My long-term goal is to build a career at the intersection of business and techn
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-<h2>Contact</h2>
+<h2><i class="fas fa-envelope"></i> Contact</h2>
 <p>Email: your@email.com</p>
 <p>LinkedIn: add-your-link</p>
 <p>Location: Singapore</p>
