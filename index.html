@@ -3,283 +3,402 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Natalie Lau | Technology Portfolio</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Natalie Lau | Professional Portfolio</title>
 
-<!-- Font Awesome CDN for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-dg/3htk6VnR+zq4pMkncFMpFhwT1CEkT1f9HmqPbiC1F/wj+Y+KkTQe0vE5Gd2c0cIGTXzP6UncF7t+3lMcYhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* GENERAL */
-html {
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f7f9fc;
-    color: #0f172a;
-    line-height: 1.7;
+
+/* ===== GLOBAL ===== */
+
+html{
+scroll-behavior:smooth;
 }
 
-/* NAVBAR */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: white;
-    border-bottom: 1px solid #e2e8f0;
-    z-index: 1000;
-}
-nav {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 18px;
-    font-weight: 600;
-}
-nav a {
-    text-decoration: none;
-    color: #0f172a;
-    transition: color 0.3s;
-}
-nav a:hover {
-    color: #1e40af; /* NTU blue accent */
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#f8fafc;
+color:#0f172a;
+line-height:1.75;
 }
 
-/* HERO - CLEAN FULL WIDTH */
-.hero {
-    padding-top: 140px;
-    padding-bottom: 80px;
-    text-align: center;
-    max-width: 900px;
-    margin: auto;
-    background: none; /* clean full-width */
-    border-radius: 0;
-    box-shadow: none;
-}
-.hero h1 {
-    font-size:56px;
-    font-weight:700;
-    margin-bottom: 10px;
-    color: #1e3a8a; /* heading blue */
-}
-.subtitle {
-    font-size: 22px;
-    color: #475569;
-    margin-bottom: 25px;
-}
-.hero p {
-    font-size: 18px;
-    color: #334155;
+/* ===== NAVBAR ===== */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+border-bottom:1px solid #e5e7eb;
+z-index:999;
 }
 
-/* SECTIONS */
-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 70px 20px;
-}
-h2 {
-    font-size: 30px;
-    margin-bottom: 25px;
-    border-bottom: 3px solid #e2e8f0;
-    padding-bottom: 8px;
-    color: #1e3a8a;
-}
-h2 i {
-    color: #1e3a8a; /* deep blue for all icons */
-    margin-right: 8px;
-}
-p {
-    margin-bottom: 16px;
+nav{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:center;
+gap:42px;
+padding:18px;
+font-weight:500;
 }
 
-/* CARDS */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 20px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-}
-.card strong {
-    color: #1e3a8a;
+nav a{
+text-decoration:none;
+color:#0f172a;
+transition:.25s;
 }
 
-/* SKILLS GRID */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-}
-.skill {
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    padding: 16px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 500;
-    transition: transform 0.2s, background 0.2s;
-}
-.skill:hover {
-    transform: translateY(-3px);
-    background: #f1f5f9;
+nav a:hover{
+color:#1e3a8a;
 }
 
-/* CONTACT */
-.contact a {
-    color: #1e40af;
-    text-decoration: none;
-    font-weight: 500;
-}
-.contact a:hover {
-    text-decoration: underline;
+/* ===== HERO ===== */
+
+.hero{
+padding-top:160px;
+padding-bottom:90px;
+max-width:850px;
+margin:auto;
+text-align:center;
 }
 
-/* MOBILE */
+.hero h1{
+font-size:60px;
+margin-bottom:6px;
+font-weight:700;
+color:#1e3a8a;
+letter-spacing:-1px;
+}
+
+.subtitle{
+font-size:22px;
+color:#475569;
+margin-bottom:26px;
+}
+
+.hero p{
+font-size:19px;
+color:#334155;
+}
+
+/* ===== SECTIONS ===== */
+
+section{
+max-width:900px;
+margin:auto;
+padding:80px 20px;
+}
+
+h2{
+font-size:32px;
+margin-bottom:26px;
+color:#1e3a8a;
+position:relative;
+}
+
+h2:after{
+content:"";
+width:55px;
+height:3px;
+background:#1e3a8a;
+position:absolute;
+left:0;
+bottom:-8px;
+border-radius:2px;
+}
+
+h2 i{
+margin-right:10px;
+}
+
+/* ===== CARD ===== */
+
+.card{
+background:white;
+padding:30px;
+border-radius:14px;
+border:1px solid #e2e8f0;
+box-shadow:0 6px 18px rgba(0,0,0,.04);
+margin-top:25px;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.card strong{
+color:#1e3a8a;
+font-size:18px;
+}
+
+/* ===== SKILLS ===== */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:18px;
+margin-top:25px;
+}
+
+.skill{
+background:white;
+border:1px solid #e2e8f0;
+padding:18px;
+border-radius:10px;
+text-align:center;
+transition:.2s;
+}
+
+.skill:hover{
+background:#f1f5f9;
+transform:translateY(-3px);
+}
+
+/* ===== CONTACT ===== */
+
+.contact a{
+text-decoration:none;
+color:#1e3a8a;
+font-weight:500;
+}
+
+.contact a:hover{
+text-decoration:underline;
+}
+
+/* ===== MOBILE ===== */
+
 @media(max-width:768px){
-    .hero h1{
-        font-size:36px;
-    }
-    .subtitle{
-        font-size:18px;
-    }
-    nav{
-        gap:18px;
-        font-size:14px;
-        flex-wrap:wrap;
-    }
-    section{
-        padding:50px 16px;
-    }
+
+.hero h1{
+font-size:42px;
 }
+
+.subtitle{
+font-size:18px;
+}
+
+nav{
+gap:18px;
+flex-wrap:wrap;
+font-size:14px;
+}
+
+section{
+padding:60px 18px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header>
 <nav>
-<a href="#about">About</a>
+<a href="#profile">Profile</a>
 <a href="#internship">Internship</a>
 <a href="#academic">Academic</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
-<a href="#vision">Vision</a>
+<a href="#aspirations">Aspirations</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
+
 <!-- HERO -->
+
 <div class="hero">
+
 <h1>Natalie Lau</h1>
+
 <div class="subtitle">
-Business & Financial Technology Graduate | Advancing Towards the NTU Bachelor of Technology (Part-Time)
-</div>
-<p>
-I am driven to deepen my expertise in technology and apply it to solve real-world business challenges. Through my academic projects and professional internship experience, I have developed a strong foundation in digital solutions and practical problem-solving. As I pursue the NTU Bachelor of Technology (Part-Time), I am committed to continuous learning and ready to take on the discipline required to balance work and university studies while contributing meaningfully to the technology landscape.
-</p>
+Business & Financial Technology Graduate | Committed to Advancing My Technological Expertise at NTU
 </div>
 
-<!-- ABOUT -->
-<section id="about">
+<p>
+Driven to deepen my expertise in technology and apply it to real-world business environments, I am preparing to pursue the NTU Bachelor of Technology (Part-Time) while continuing to grow professionally. With internship experience in an enterprise technology setting and a strong foundation in digital solutions, I am ready to embrace academic rigor and contribute meaningfully to the evolving technology landscape.
+</p>
+
+</div>
+
+
+<!-- ABOUT ME -->
+
+<section id="profile">
+
 <h2><i class="fas fa-user"></i> About Me</h2>
+
 <p>
-I am a detail-oriented and adaptable graduate with a solid foundation in business concepts and technological applications. My diploma education strengthened my analytical thinking, problem-solving abilities, and capacity to approach challenges from multiple perspectives.
+My interest in Business and Financial Technology was shaped by a natural inclination towards analytical thinking and mathematics, alongside an early recognition of technology’s expanding role in modern industries. Seeking a path that combines business understanding with technical capability, I pursued a diploma that would prepare me for the demands of a digital economy.
 </p>
+
 <p>
-I enjoy working on meaningful projects that require critical thinking and structured execution, particularly in areas where digital innovation can transform processes and outcomes.
+During my studies, I developed <strong>QuickHire</strong>, a web-based platform designed to modernise part-time job matching by connecting workers to opportunities based on availability, proximity, and real-time demand. The system incorporated dual-review features for employers and employees to promote transparency and better hiring decisions. This project strengthened my abilities in user-focused design, structured problem-solving, and solution development.
 </p>
+
+<p>
+My year-long internship at NCS marked a significant turning point in my growth. Operating within a professional technology environment required me to manage competing priorities, communicate technical issues clearly, and develop greater independence when approaching unfamiliar challenges. These experiences cultivated discipline and resilience — qualities that continue to guide my academic and professional progression.
+</p>
+
+<p>
+Following the internship, I was offered the opportunity to continue with the organisation under a work-study arrangement. This milestone affirmed my readiness to balance professional responsibilities with university-level education.
+</p>
+
+<p>
+As I prepare for the NTU Bachelor of Technology (Part-Time), I remain committed to strengthening my theoretical foundations while building upon my industry experience. I aspire to contribute to the technology sector — particularly within fintech — where innovation continues to reshape business and financial ecosystems.
+</p>
+
 </section>
+
+
 
 <!-- INTERNSHIP -->
+
 <section id="internship">
-<h2><i class="fas fa-briefcase"></i> Internship Experience</h2>
+
+<h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+
 <div class="card">
+
 <strong>Application Support Intern — NCS Hub, Ang Mo Kio</strong>
+
 <p>
-During my internship, I supported enterprise applications by assisting in incident management, user support, and operational processes. This experience strengthened my ability to function responsibly in a fast-paced IT environment.
+During my internship within an enterprise technology environment, I supported business-critical applications and contributed to operational continuity. The role demanded precision, accountability, and the ability to respond effectively within fast-paced situations.
 </p>
+
 <ul>
-<li>Resolved user incidents and service requests with accuracy and professionalism</li>
-<li>Executed System Integration Testing (SIT) across multiple environments</li>
-<li>Performed data extraction and profiling to support operational needs</li>
-<li>Collaborated with team members to troubleshoot issues and maintain service quality</li>
+<li>Managed incident resolution and user support while maintaining service reliability</li>
+<li>Performed System Integration Testing (SIT) across multiple environments</li>
+<li>Executed data extraction and profiling to support operational requirements</li>
+<li>Collaborated with cross-functional teams to troubleshoot and resolve technical issues</li>
+<li>Strengthened professional communication when engaging stakeholders</li>
 </ul>
-<p><strong>Key Takeaway:</strong> Enhanced technical confidence, communication skills, and attention to detail while reinforcing my interest in technology-driven careers.</p>
+
+<p>
+<strong>Key Outcome:</strong> The experience accelerated my professional maturity and confirmed my readiness for greater technical depth — motivating my pursuit of further university education.
+</p>
+
 </div>
+
 </section>
+
+
 
 <!-- ACADEMIC -->
+
 <section id="academic">
+
 <h2><i class="fas fa-graduation-cap"></i> Academic Background</h2>
+
 <div class="card">
-<strong>Diploma in Business & Financial Technology</strong><br>
-Nanyang Polytechnic
+
+<strong>Diploma in Business & Financial Technology — Nanyang Polytechnic</strong>
+
 <p>
-My academic training provided interdisciplinary exposure to financial systems, business processes, and technological innovation. Through coursework and applied projects, I developed the ability to analyse problems systematically and propose practical solutions.
+My academic training provided interdisciplinary exposure to financial systems, business processes, and emerging technologies. Through applied projects and collaborative work, I developed structured thinking, adaptability, and the ability to translate concepts into practical solutions.
 </p>
-<p>Key areas of study: Financial Analytics, Business Information Systems, Data Management, and Digital Innovation.</p>
+
+<p>
+The programme strengthened my preparation for continued academic advancement and laid the groundwork for deeper specialisation in computing.
+</p>
+
 </div>
+
 </section>
+
+
 
 <!-- PROJECTS -->
+
 <section id="projects">
-<h2><i class="fas fa-project-diagram"></i> Selected Projects</h2>
+
+<h2><i class="fas fa-diagram-project"></i> Selected Project</h2>
+
 <div class="card">
-<strong>QuickHire – Recruitment Platform</strong>
-<p>Developed a prototype recruitment platform aimed at improving hiring efficiency through intuitive navigation and user-focused design.</p>
+
+<strong>QuickHire — Intelligent Part-Time Job Matching Platform</strong>
+
+<p>
+Designed and developed a digital platform that improves the efficiency of part-time job discovery by matching individuals to opportunities based on availability, location, and demand dynamics such as surge pricing.
+</p>
+
+<p>
+The platform introduced a two-way review ecosystem to enhance hiring transparency while supporting informed decision-making for both employers and workers.
+</p>
+
+<p>
+This project reflects my interest in building practical technology that addresses real-world inefficiencies.
+</p>
+
 </div>
-<div class="card">
-<strong>Bob the Recycler – Sustainability Initiative</strong>
-<p>Designed a digital platform promoting recycling awareness, demonstrating how technology can support environmental responsibility.</p>
-</div>
-<div class="card">
-<strong>Hotel UX Design</strong>
-<p>Created a user experience prototype to enhance booking efficiency and improve customer interaction.</p>
-</div>
+
 </section>
+
+
 
 <!-- SKILLS -->
+
 <section id="skills">
-<h2><i class="fas fa-lightbulb"></i> Skills</h2>
+
+<h2><i class="fas fa-lightbulb"></i> Core Competencies</h2>
+
 <div class="skills">
-<div class="skill">HTML, CSS, JavaScript</div>
-<div class="skill">Python (Foundational)</div>
-<div class="skill">Responsive Web Design</div>
-<div class="skill">User Experience Principles</div>
-<div class="skill">Business Technology Applications</div>
-<div class="skill">Analytical Thinking & Problem Solving</div>
+
+<div class="skill">Web Development Fundamentals (HTML, CSS, JavaScript)</div>
+<div class="skill">Foundational Python</div>
+<div class="skill">User-Centric Design Thinking</div>
+<div class="skill">Analytical Problem-Solving</div>
+<div class="skill">Business Technology Integration</div>
+<div class="skill">Professional Communication</div>
+<div class="skill">Adaptability in Fast-Paced Environments</div>
+<div class="skill">Resilience & Execution Discipline</div>
+
 </div>
+
 </section>
 
-<!-- VISION -->
-<section id="vision">
+
+
+<!-- ASPIRATIONS -->
+
+<section id="aspirations">
+
 <h2><i class="fas fa-bullseye"></i> Academic & Career Aspirations</h2>
+
 <p>
-I aspire to further my education in a dynamic university environment to deepen my technological expertise and broaden my understanding of digital transformation.
+I aspire to deepen my technical expertise through rigorous university education while continuing to gain industry exposure. By integrating academic knowledge with professional practice, I aim to develop into a technology practitioner capable of contributing thoughtful and impactful solutions.
 </p>
+
 <p>
-My long-term goal is to build a career at the intersection of business and technology, contributing to organisations that value innovation, continuous improvement, and forward-thinking solutions.
+Looking ahead, I am particularly interested in the evolving fintech space, where technological innovation continues to redefine how financial services and businesses operate.
 </p>
+
 </section>
+
+
 
 <!-- CONTACT -->
+
 <section id="contact" class="contact">
+
 <h2><i class="fas fa-envelope"></i> Contact</h2>
+
 <p>Email: your@email.com</p>
 <p>LinkedIn: add-your-link</p>
 <p>Location: Singapore</p>
+
 </section>
 
 </body>
 </html>
-
-
