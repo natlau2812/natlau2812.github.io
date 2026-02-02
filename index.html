@@ -3,34 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Natalie Lau | Technology Portfolio</title>
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
+/* GENERAL */
 html{
     scroll-behavior:smooth;
 }
-
 body{
     margin:0;
     font-family:'Inter', sans-serif;
     background:#f7f9fc;
     color:#0f172a;
+    line-height:1.7;
 }
 
 /* NAVBAR */
-
 header{
     position:fixed;
     top:0;
     width:100%;
     background:white;
     border-bottom:1px solid #e2e8f0;
+    z-index:1000;
 }
-
 nav{
     max-width:1100px;
     margin:auto;
@@ -40,18 +39,16 @@ nav{
     padding:18px;
     font-weight:600;
 }
-
 nav a{
     text-decoration:none;
     color:#0f172a;
+    transition: color 0.3s;
 }
-
 nav a:hover{
-    color:#2563eb;
+    color:#1e40af; /* NTU blue-ish accent */
 }
 
 /* HERO */
-
 .hero{
     padding-top:140px;
     padding-bottom:80px;
@@ -59,83 +56,96 @@ nav a:hover{
     max-width:900px;
     margin:auto;
 }
-
 .hero h1{
-    font-size:48px;
+    font-size:50px;
     margin-bottom:10px;
+    color:#1e3a8a; /* deeper blue for professional emphasis */
 }
-
 .subtitle{
-    font-size:20px;
+    font-size:22px;
     color:#475569;
     margin-bottom:25px;
 }
+.hero p{
+    font-size:18px;
+    color:#334155;
+}
 
+/* SECTIONS */
 section{
     max-width:900px;
     margin:auto;
     padding:70px 20px;
 }
-
 h2{
-    font-size:28px;
-    margin-bottom:20px;
-    border-bottom:2px solid #e2e8f0;
+    font-size:30px;
+    margin-bottom:25px;
+    border-bottom:3px solid #e2e8f0;
     padding-bottom:8px;
+    color:#1e3a8a;
 }
-
 p{
-    line-height:1.7;
+    margin-bottom:16px;
 }
 
 /* CARDS */
-
 .card{
     background:white;
-    padding:22px;
+    padding:25px;
     border-radius:12px;
-    margin-top:18px;
+    margin-top:20px;
     border:1px solid #e2e8f0;
+    box-shadow:0 3px 6px rgba(0,0,0,0.05);
 }
 
+/* SKILLS GRID */
 .skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:12px;
+    gap:15px;
 }
-
 .skill{
     background:white;
     border:1px solid #e2e8f0;
-    padding:14px;
+    padding:16px;
     border-radius:10px;
+    text-align:center;
+    font-weight:500;
 }
 
+/* CONTACT */
 .contact a{
-    color:#2563eb;
+    color:#1e40af;
     text-decoration:none;
+    font-weight:500;
+}
+.contact a:hover{
+    text-decoration:underline;
 }
 
 /* MOBILE */
-
 @media(max-width:768px){
-
-.hero h1{
-    font-size:34px;
+    .hero h1{
+        font-size:36px;
+    }
+    .subtitle{
+        font-size:18px;
+    }
+    nav{
+        gap:18px;
+        font-size:14px;
+        flex-wrap:wrap;
+    }
+    section{
+        padding:50px 16px;
+    }
 }
-
-nav{
-    gap:18px;
-    font-size:14px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
 <nav>
 <a href="#about">About</a>
@@ -149,163 +159,105 @@ nav{
 </header>
 
 <!-- HERO -->
-
 <div class="hero">
-
 <h1>Natalie Lau</h1>
-
 <div class="subtitle">
 Business & Financial Technology Graduate | Aspiring Technology Professional
 </div>
-
 <p>
-Motivated by a strong interest in digital innovation, I am passionate about leveraging technology to solve real-world problems and improve business processes. I am committed to continuous learning and look forward to advancing my academic journey in a rigorous university environment.
+I am passionate about leveraging technology to solve real-world problems and improve business processes. With practical experience in web development and digital solutions, I aim to contribute meaningfully in any academic or professional environment.
 </p>
-
 </div>
 
 <!-- ABOUT -->
-
 <section id="about">
-
 <h2>About Me</h2>
-
 <p>
-I am a detail-oriented and adaptable graduate with a foundation in both business concepts and technological applications. My diploma education strengthened my analytical thinking, problem-solving abilities, and capacity to approach challenges from multiple perspectives.
+I am a detail-oriented and adaptable graduate with a solid foundation in business concepts and technological applications. My diploma education strengthened my analytical thinking, problem-solving abilities, and capacity to approach challenges from multiple perspectives.
 </p>
-
 <p>
-I enjoy working on meaningful projects that require critical thinking and structured execution, and I am particularly interested in how digital innovation continues to transform industries.
+I enjoy working on meaningful projects that require critical thinking and structured execution, particularly in areas where digital innovation can transform processes and outcomes.
 </p>
-
 </section>
 
 <!-- INTERNSHIP -->
-
 <section id="internship">
-
 <h2>Internship Experience</h2>
-
 <div class="card">
-
 <strong>Application Support Intern — NCS Hub, Ang Mo Kio</strong>
-
 <p>
-During my internship, I supported enterprise applications by assisting in incident management, user support, and operational processes within a professional IT environment. This exposure strengthened my ability to function responsibly in a fast-paced setting.
+During my internship, I supported enterprise applications by assisting in incident management, user support, and operational processes. This experience strengthened my ability to function responsibly in a fast-paced IT environment.
 </p>
-
 <ul>
 <li>Resolved user incidents and service requests with accuracy and professionalism</li>
 <li>Executed System Integration Testing (SIT) across multiple environments</li>
 <li>Performed data extraction and profiling to support operational needs</li>
 <li>Collaborated with team members to troubleshoot issues and maintain service quality</li>
 </ul>
-
-<p>
-<strong>Key Takeaway:</strong> This experience enhanced my technical confidence, communication skills, and attention to detail while reinforcing my interest in technology-driven careers.
-</p>
-
+<p><strong>Key Takeaway:</strong> Enhanced technical confidence, communication skills, and attention to detail while reinforcing my interest in technology-driven careers.</p>
 </div>
-
 </section>
 
 <!-- ACADEMIC -->
-
 <section id="academic">
-
 <h2>Academic Background</h2>
-
 <div class="card">
-
 <strong>Diploma in Business & Financial Technology</strong><br>
 Nanyang Polytechnic
-
 <p>
 My academic training provided interdisciplinary exposure to financial systems, business processes, and technological innovation. Through coursework and applied projects, I developed the ability to analyse problems systematically and propose practical solutions.
 </p>
-
-<p>
-Key areas of study included Financial Analytics, Business Information Systems, Data Management, and Digital Innovation.
-</p>
-
+<p>Key areas of study: Financial Analytics, Business Information Systems, Data Management, and Digital Innovation.</p>
 </div>
-
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects">
-
 <h2>Selected Projects</h2>
-
 <div class="card">
 <strong>QuickHire – Recruitment Platform</strong>
-<p>
-Developed a prototype recruitment platform aimed at improving hiring efficiency through intuitive navigation and user-focused design.
-</p>
+<p>Developed a prototype recruitment platform aimed at improving hiring efficiency through intuitive navigation and user-focused design.</p>
 </div>
-
 <div class="card">
 <strong>Bob the Recycler – Sustainability Initiative</strong>
-<p>
-Designed a digital platform promoting recycling awareness, demonstrating how technology can support environmental responsibility.
-</p>
+<p>Designed a digital platform promoting recycling awareness, demonstrating how technology can support environmental responsibility.</p>
 </div>
-
 <div class="card">
 <strong>Hotel UX Design</strong>
-<p>
-Created a user experience prototype to enhance booking efficiency and improve customer interaction.
-</p>
+<p>Created a user experience prototype to enhance booking efficiency and improve customer interaction.</p>
 </div>
-
 </section>
 
 <!-- SKILLS -->
-
 <section id="skills">
-
 <h2>Skills</h2>
-
 <div class="skills">
-
 <div class="skill">HTML, CSS, JavaScript</div>
 <div class="skill">Python (Foundational)</div>
 <div class="skill">Responsive Web Design</div>
 <div class="skill">User Experience Principles</div>
 <div class="skill">Business Technology Applications</div>
 <div class="skill">Analytical Thinking & Problem Solving</div>
-
 </div>
-
 </section>
 
 <!-- VISION -->
-
 <section id="vision">
-
 <h2>Academic & Career Aspirations</h2>
-
 <p>
-I aspire to further my education in a dynamic university environment where I can deepen my technological expertise and broaden my understanding of digital transformation.
+I aspire to further my education in a dynamic university environment to deepen my technological expertise and broaden my understanding of digital transformation.
 </p>
-
 <p>
 My long-term goal is to build a career at the intersection of business and technology, contributing to organisations that value innovation, continuous improvement, and forward-thinking solutions.
 </p>
-
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact" class="contact">
-
 <h2>Contact</h2>
-
 <p>Email: your@email.com</p>
 <p>LinkedIn: add-your-link</p>
 <p>Location: Singapore</p>
-
 </section>
 
 </body>
