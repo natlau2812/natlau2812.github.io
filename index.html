@@ -19,91 +19,101 @@
 body{
     font-family:'Inter', sans-serif;
     background:#fafafa;
-    color:#1a1a1a;
+    color:#111827;
 }
 
-/* MAIN CONTAINER */
+/* MAIN */
 
 .container{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
-    padding:60px 20px;
+    padding:70px 24px;
 }
-
-/* GRID */
 
 .grid{
     display:grid;
-    grid-template-columns: 320px 1fr;
-    gap:60px;
+    grid-template-columns:340px 1fr;
+    gap:70px;
 }
 
-/* LEFT COLUMN */
+/* LEFT */
 
 .left{
     position:sticky;
-    top:60px;
+    top:70px;
     height:fit-content;
 }
 
 .name{
-    font-size:28px;
+    font-size:30px;
     font-weight:600;
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 
 .tagline{
     color:#2563eb;
     font-weight:500;
-    margin-bottom:20px;
+    margin-bottom:22px;
 }
 
 .bio{
-    font-size:14px;
+    font-size:14.5px;
     color:#6b7280;
-    line-height:1.6;
-    margin-bottom:30px;
+    line-height:1.7;
+    margin-bottom:28px;
 }
 
 .contact{
     font-size:14px;
     color:#6b7280;
-    line-height:1.8;
+    line-height:1.9;
 }
 
-/* RIGHT COLUMN */
+/* RIGHT */
 
 .section{
-    margin-bottom:40px;
+    margin-bottom:46px;
 }
 
 .section-title{
     font-size:12px;
-    letter-spacing:1.5px;
+    letter-spacing:1.6px;
     text-transform:uppercase;
     color:#6b7280;
-    margin-bottom:16px;
+    margin-bottom:18px;
     font-weight:600;
 }
 
-/* CARD STYLE */
+/* CARDS */
 
 .card{
     background:white;
-    padding:20px;
-    border-radius:10px;
+    padding:22px;
+    border-radius:12px;
     border:1px solid #e5e7eb;
-    margin-bottom:16px;
+    margin-bottom:18px;
+    transition:0.2s;
+}
+
+.card:hover{
+    border-color:#d1d5db;
 }
 
 .role{
     font-weight:600;
+    font-size:15px;
     margin-bottom:4px;
 }
 
 .meta{
     font-size:12px;
     color:#6b7280;
+    margin-bottom:12px;
+}
+
+.description{
+    font-size:14px;
+    color:#374151;
     margin-bottom:10px;
 }
 
@@ -113,22 +123,32 @@ ul{
 
 li{
     font-size:14px;
-    margin-bottom:6px;
-    line-height:1.5;
+    margin-bottom:7px;
+    line-height:1.6;
 }
 
-.skills{
+/* SKILLS */
+
+.skills-group{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:8px;
+    margin-bottom:10px;
 }
 
 .skill{
     border:1px solid #e5e7eb;
     padding:6px 10px;
-    border-radius:6px;
+    border-radius:7px;
     font-size:13px;
     background:white;
+}
+
+/* HIGHLIGHT BOX */
+
+.highlight{
+    background:#eff6ff;
+    border:1px solid #dbeafe;
 }
 
 </style>
@@ -137,34 +157,31 @@ li{
 <body>
 
 <div class="container">
-
 <div class="grid">
 
-<!-- LEFT COLUMN -->
+<!-- LEFT -->
 
 <div class="left">
 
 <div class="name">Natalie Lau</div>
 
 <div class="tagline">
-Applied Computing • FinTech • Automation
+Applied Computing • Financial Technology • Automation
 </div>
 
 <div class="bio">
-Business & Financial Technology student with internship experience at NCS. 
-Skilled in automation, testing, and application support, with strong interest in technology-driven business solutions.
+Business & Financial Technology student with hands-on experience supporting enterprise systems at NCS. Proven ability to improve workflows through automation, perform structured testing, and collaborate across teams. Passionate about leveraging technology to build efficient, scalable business solutions.
 </div>
 
 <div class="contact">
 Singapore<br>
 yourname@email.com<br>
-LinkedIn / GitHub
+LinkedIn • GitHub
 </div>
 
 </div>
 
-
-<!-- RIGHT COLUMN -->
+<!-- RIGHT -->
 
 <div class="right">
 
@@ -174,19 +191,24 @@ LinkedIn / GitHub
 <div class="section-title">Experience</div>
 
 <div class="card">
+
 <div class="role">Business System Analyst Intern — NCS</div>
 <div class="meta">Apr 2025 – Mar 2026</div>
 
+<div class="description">
+Supported enterprise applications by managing service requests, conducting testing, and driving automation initiatives within a fast-paced production environment.
+</div>
+
 <ul>
-<li>Managed Service Requests and Change Requests via ServiceNow, ensuring timely resolution.</li>
-<li>Performed System Integration Testing (SIT), UAT support, and Security & Audit Testing.</li>
-<li>Improved workflow efficiency by automating manual processes using Power Automate.</li>
-<li>Collaborated with cross-functional teams and produced structured test documentation.</li>
+<li>Handled user queries, Service Requests, and Change Requests via ServiceNow, ensuring prompt resolution.</li>
+<li>Executed System Integration Testing (SIT), provided UAT support, and independently performed Security & Audit Testing.</li>
+<li>Reduced manual effort by streamlining processes using Power Automate.</li>
+<li>Authored structured test cases and documentation to support system reliability.</li>
+<li>Collaborated with cross-functional stakeholders to diagnose and resolve application issues.</li>
 </ul>
-</div>
 
 </div>
-
+</div>
 
 <!-- EDUCATION -->
 
@@ -196,7 +218,10 @@ LinkedIn / GitHub
 <div class="card">
 <div class="role">Diploma in Business and Financial Technology — Nanyang Polytechnic</div>
 <div class="meta">Apr 2023 – May 2026</div>
-Database Management • Business Analytics • RPA • Web Development
+
+<div class="description">
+Relevant Coursework: Database Management, Business Analytics, Robotic Process Automation, Web Development
+</div>
 </div>
 
 <div class="card">
@@ -206,19 +231,19 @@ Database Management • Business Analytics • RPA • Web Development
 
 </div>
 
-
 <!-- LEADERSHIP -->
 
 <div class="section">
 <div class="section-title">Leadership & Activities</div>
 
 <div class="card">
+
 <div class="role">Vice President / EXCO — Modern Dance</div>
 <div class="meta">2020 – 2022</div>
 
 <ul>
-<li>Led team coordination for performances and school events.</li>
-<li>Developed leadership, communication, and organizational skills.</li>
+<li>Led team coordination for performances and large-scale school events.</li>
+<li>Strengthened leadership and communication skills while managing team responsibilities.</li>
 </ul>
 
 </div>
@@ -230,23 +255,40 @@ Database Management • Business Analytics • RPA • Web Development
 
 </div>
 
-
 <!-- SKILLS -->
 
 <div class="section">
 <div class="section-title">Technical Skills</div>
 
-<div class="skills">
-
+<div class="skills-group">
 <div class="skill">UiPath</div>
 <div class="skill">Power Automate</div>
 <div class="skill">ServiceNow</div>
+</div>
+
+<div class="skills-group">
 <div class="skill">SQL</div>
 <div class="skill">Excel</div>
+<div class="skill">Database Fundamentals</div>
+</div>
+
+<div class="skills-group">
 <div class="skill">Web Development</div>
 <div class="skill">RPA</div>
+<div class="skill">Process Automation</div>
+</div>
 
 </div>
+
+<!-- MEMORABLE SECTION -->
+
+<div class="section">
+<div class="section-title">Currently Building</div>
+
+<div class="card highlight">
+Expanding my expertise in applied computing and financial technology while developing automation-driven projects that improve operational efficiency.
+</div>
+
 </div>
 
 </div>
