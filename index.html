@@ -4,151 +4,158 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Natalie Lau | Applied Computing & FinTech</title>
+<title>Natalie Lau | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* COLOR SYSTEM */
+
+:root{
+    --primary:#2563eb;
+    --text:#111827;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+    --bg:#fafafa;
+}
+
+/* GLOBAL */
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Inter', sans-serif;
-    background:#fafafa;
-    color:#111827;
+margin:0;
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.65;
 }
 
-/* MAIN */
+/* HERO */
 
-.container{
-    max-width:1150px;
-    margin:auto;
-    padding:70px 24px;
+.hero{
+text-align:center;
+padding:90px 20px 50px;
+max-width:900px;
+margin:auto;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:340px 1fr;
-    gap:70px;
-}
-
-/* LEFT */
-
-.left{
-    position:sticky;
-    top:70px;
-    height:fit-content;
-}
-
-.name{
-    font-size:30px;
-    font-weight:600;
-    margin-bottom:6px;
+.hero h1{
+font-size:52px;
+margin-bottom:8px;
+letter-spacing:-1px;
 }
 
 .tagline{
-    color:#2563eb;
-    font-weight:500;
-    margin-bottom:22px;
+color:var(--primary);
+font-weight:600;
+font-size:18px;
+margin-bottom:18px;
 }
 
-.bio{
-    font-size:14.5px;
-    color:#6b7280;
-    line-height:1.7;
-    margin-bottom:28px;
+.hero p{
+color:var(--muted);
+font-size:18px;
+max-width:720px;
+margin:auto;
 }
 
-.contact{
-    font-size:14px;
-    color:#6b7280;
-    line-height:1.9;
-}
+/* MAIN GRID */
 
-/* RIGHT */
-
-.section{
-    margin-bottom:46px;
-}
-
-.section-title{
-    font-size:12px;
-    letter-spacing:1.6px;
-    text-transform:uppercase;
-    color:#6b7280;
-    margin-bottom:18px;
-    font-weight:600;
+.container{
+max-width:1080px;
+margin:auto;
+padding:30px 20px 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:26px;
 }
 
 /* CARDS */
 
 .card{
-    background:white;
-    padding:22px;
-    border-radius:12px;
-    border:1px solid #e5e7eb;
-    margin-bottom:18px;
-    transition:0.2s;
+background:white;
+border:1px solid var(--border);
+border-radius:14px;
+padding:26px;
+transition:.25s;
 }
 
 .card:hover{
-    border-color:#d1d5db;
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(0,0,0,.06);
 }
 
-.role{
-    font-weight:600;
-    font-size:15px;
-    margin-bottom:4px;
+.card h2{
+margin-top:0;
+font-size:20px;
+margin-bottom:14px;
 }
 
-.meta{
-    font-size:12px;
-    color:#6b7280;
-    margin-bottom:12px;
-}
-
-.description{
-    font-size:14px;
-    color:#374151;
-    margin-bottom:10px;
+.card p{
+color:var(--muted);
+margin-bottom:10px;
 }
 
 ul{
-    padding-left:18px;
+padding-left:18px;
+margin-top:8px;
 }
 
 li{
-    font-size:14px;
-    margin-bottom:7px;
-    line-height:1.6;
+margin-bottom:6px;
+}
+
+/* HIGHLIGHT CARD */
+
+.highlight{
+border-left:4px solid var(--primary);
 }
 
 /* SKILLS */
 
-.skills-group{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-bottom:10px;
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
 }
 
 .skill{
-    border:1px solid #e5e7eb;
-    padding:6px 10px;
-    border-radius:7px;
-    font-size:13px;
-    background:white;
+border:1px solid var(--border);
+padding:6px 12px;
+border-radius:8px;
+font-size:14px;
+background:#fff;
 }
 
-/* HIGHLIGHT BOX */
+/* CONTACT */
 
-.highlight{
-    background:#eff6ff;
-    border:1px solid #dbeafe;
+.contact a{
+text-decoration:none;
+color:var(--primary);
+font-weight:500;
+}
+
+.contact a:hover{
+text-decoration:underline;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.container{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -156,143 +163,189 @@ li{
 
 <body>
 
-<div class="container">
-<div class="grid">
 
-<!-- LEFT -->
+<!-- HERO -->
 
-<div class="left">
+<div class="hero">
 
-<div class="name">Natalie Lau</div>
+<h1>Natalie Lau</h1>
 
 <div class="tagline">
-Applied Computing • Financial Technology • Automation
+Aspiring Technology Professional | Applied Computing & FinTech
 </div>
 
-<div class="bio">
-Business & Financial Technology student with hands-on experience supporting enterprise systems at NCS. Proven ability to improve workflows through automation, perform structured testing, and collaborate across teams. Passionate about leveraging technology to build efficient, scalable business solutions.
-</div>
-
-<div class="contact">
-Singapore<br>
-yourname@email.com<br>
-LinkedIn • GitHub
-</div>
+<p>
+Business & Financial Technology student with enterprise internship experience in business analysis and application support. Passionate about leveraging technology to improve workflows, enhance systems, and create meaningful operational impact.
+</p>
 
 </div>
 
-<!-- RIGHT -->
 
-<div class="right">
+
+<!-- GRID CONTENT -->
+
+<div class="container">
+
+<!-- ABOUT -->
+
+<div class="card">
+<h2>About Me</h2>
+
+<p>
+I am driven by analytical thinking and structured problem-solving, with a growing interest in applied computing and financial technology.
+</p>
+
+<p>
+Through enterprise exposure and academic projects, I have developed adaptability, independence, and the confidence to operate in fast-paced technology environments.
+</p>
+
+</div>
+
 
 <!-- EXPERIENCE -->
 
-<div class="section">
-<div class="section-title">Experience</div>
+<div class="card highlight">
+<h2>Professional Experience</h2>
 
-<div class="card">
-
-<div class="role">Business System Analyst Intern — NCS</div>
-<div class="meta">Apr 2025 – Mar 2026</div>
-
-<div class="description">
-Supported enterprise applications by managing service requests, conducting testing, and driving automation initiatives within a fast-paced production environment.
-</div>
+<strong>Business System Analyst Intern — NCS</strong><br>
+Apr 2025 – Mar 2026
 
 <ul>
-<li>Handled user queries, Service Requests, and Change Requests via ServiceNow, ensuring prompt resolution.</li>
-<li>Executed System Integration Testing (SIT), provided UAT support, and independently performed Security & Audit Testing.</li>
-<li>Reduced manual effort by streamlining processes using Power Automate.</li>
-<li>Authored structured test cases and documentation to support system reliability.</li>
-<li>Collaborated with cross-functional stakeholders to diagnose and resolve application issues.</li>
-</ul>
-
-</div>
-</div>
-
-<!-- EDUCATION -->
-
-<div class="section">
-<div class="section-title">Education</div>
-
-<div class="card">
-<div class="role">Diploma in Business and Financial Technology — Nanyang Polytechnic</div>
-<div class="meta">Apr 2023 – May 2026</div>
-
-<div class="description">
-Relevant Coursework: Database Management, Business Analytics, Robotic Process Automation, Web Development
-</div>
-</div>
-
-<div class="card">
-<div class="role">Beatty Secondary School</div>
-<div class="meta">2019 – 2022</div>
-</div>
-
-</div>
-
-<!-- LEADERSHIP -->
-
-<div class="section">
-<div class="section-title">Leadership & Activities</div>
-
-<div class="card">
-
-<div class="role">Vice President / EXCO — Modern Dance</div>
-<div class="meta">2020 – 2022</div>
-
-<ul>
-<li>Led team coordination for performances and large-scale school events.</li>
-<li>Strengthened leadership and communication skills while managing team responsibilities.</li>
+<li>Resolved user incidents, Service Requests, and Change Requests using ServiceNow and Excel.</li>
+<li>Supported System Integration Testing (SIT), User Acceptance Testing (UAT), and Security & Audit Testing.</li>
+<li>Automated manual workflows with Power Automate to improve efficiency.</li>
+<li>Documented test cases and collaborated with cross-functional teams.</li>
+<li>Trusted to independently manage security and audit testing.</li>
 </ul>
 
 </div>
 
+
+<!-- PROJECTS -->
+
 <div class="card">
-<div class="role">Volunteer Work</div>
-<div class="meta">2019 – 2020</div>
-</div>
+<h2>Projects</h2>
+
+<strong>QuickHire — Job Matching Platform</strong>
+
+<p>
+Developed a web platform that matches individuals to part-time jobs based on availability, proximity, and real-time demand while promoting transparency through a dual-review system.
+</p>
+
+<p>
+<b>Tools:</b> GitHub, Visual Studio Code
+</p>
+
+<hr>
+
+<strong>Bob the Recycler — Sustainability Platform</strong>
+
+<p>
+Built a full-stack website promoting sustainable practices with customer-facing shopping features and staff dashboards.
+</p>
+
+<p>
+<b>Tools:</b> Python Flask, Bootstrap, jQuery, Jinja
+</p>
 
 </div>
+
 
 <!-- SKILLS -->
 
-<div class="section">
-<div class="section-title">Technical Skills</div>
+<div class="card">
+<h2>Technical Skills</h2>
 
-<div class="skills-group">
-<div class="skill">UiPath</div>
-<div class="skill">Power Automate</div>
-<div class="skill">ServiceNow</div>
-</div>
-
-<div class="skills-group">
+<div class="skills">
+<div class="skill">Python</div>
 <div class="skill">SQL</div>
-<div class="skill">Excel</div>
-<div class="skill">Database Fundamentals</div>
-</div>
-
-<div class="skills-group">
-<div class="skill">Web Development</div>
-<div class="skill">RPA</div>
-<div class="skill">Process Automation</div>
-</div>
-
-</div>
-
-<!-- MEMORABLE SECTION -->
-
-<div class="section">
-<div class="section-title">Currently Building</div>
-
-<div class="card highlight">
-Expanding my expertise in applied computing and financial technology while developing automation-driven projects that improve operational efficiency.
+<div class="skill">JavaScript</div>
+<div class="skill">C#</div>
+<div class="skill">HTML/CSS</div>
+<div class="skill">MySQL</div>
+<div class="skill">UiPath</div>
+<div class="skill">ServiceNow</div>
+<div class="skill">Power Automate</div>
+<div class="skill">Business Analysis</div>
+<div class="skill">System Testing</div>
 </div>
 
 </div>
 
+
+<!-- EDUCATION -->
+
+<div class="card">
+<h2>Education</h2>
+
+<strong>Diploma in Business & Financial Technology</strong><br>
+Nanyang Polytechnic • Apr 2023 – May 2026
+
+<p>
+Relevant Modules: Database Management, Business Analytics, Robotic Process Automation, Web Development
+</p>
+
+<br>
+
+<strong>Beatty Secondary School</strong><br>
+2019 – 2022
+
 </div>
+
+
+<!-- LEADERSHIP -->
+
+<div class="card">
+<h2>Leadership & Activities</h2>
+
+<strong>Modern Dance CCA</strong><br>
+Vice President (2021–2022) • EXCO (2020–2021)
+
+<ul>
+<li>Led event planning and coordinated logistics for performances.</li>
+<li>Collaborated with committee members to manage operations.</li>
+</ul>
+
+<strong>Volunteer — Community Food Distribution</strong><br>
+2019–2020
+
+<ul>
+<li>Collected donations and distributed meals to families and individuals in need.</li>
+</ul>
+
 </div>
+
+
+<!-- GOALS -->
+
+<div class="card">
+<h2>Career Direction</h2>
+
+<p>
+Seeking opportunities in IT and fintech environments where I can deepen technical expertise, contribute to impactful projects, and grow into a well-rounded technology professional.
+</p>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="card contact">
+<h2>Contact</h2>
+
+<p>Email: your@email.com</p>
+
+<p>
+LinkedIn:  
+<a href="https://www.linkedin.com/in/natalie-lau-3172322b3/" target="_blank">
+linkedin.com/in/natalie-lau
+</a>
+</p>
+
+<p>Location: Singapore</p>
+
+</div>
+
 </div>
 
 </body>
