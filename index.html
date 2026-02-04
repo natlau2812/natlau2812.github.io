@@ -6,10 +6,7 @@
 
 <title>Natalie Lau | Technology Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,9 +19,8 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:#f8fafc;
+background:#f1f5f9;
 color:#0f172a;
-line-height:1.7;
 }
 
 /* NAVBAR */
@@ -34,116 +30,79 @@ position:fixed;
 top:0;
 width:100%;
 background:white;
-border-bottom:1px solid #e5e7eb;
+border-bottom:1px solid #e2e8f0;
 z-index:999;
 }
 
 nav{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 display:flex;
 justify-content:center;
-gap:40px;
-padding:18px;
-font-weight:500;
+gap:36px;
+padding:16px;
+font-weight:600;
 }
 
 nav a{
 text-decoration:none;
 color:#0f172a;
-transition:.25s;
 }
 
 nav a:hover{
 color:#1e3a8a;
 }
 
+/* FULL SCREEN SECTIONS */
+
+.section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
 /* HERO */
 
 .hero{
-padding-top:190px;
-padding-bottom:120px;
-max-width:900px;
-margin:auto;
 text-align:center;
 }
 
 .hero h1{
-font-size:56px;
+font-size:52px;
 margin-bottom:8px;
-font-weight:700;
 color:#1e3a8a;
 }
 
 .subtitle{
 font-size:20px;
 color:#475569;
-margin-bottom:24px;
+margin-bottom:18px;
 }
 
 .hero p{
-font-size:18px;
-color:#334155;
-max-width:720px;
+max-width:700px;
 margin:auto;
+font-size:17px;
 }
 
-/* CTA */
+/* GRID */
 
-.cta{
-display:inline-block;
-margin-top:32px;
-padding:14px 26px;
-background:#1e3a8a;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-transition:.25s;
-}
-
-.cta:hover{
-background:#172554;
-}
-
-/* HIGHLIGHTS */
-
-.highlights{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:60px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+margin-top:40px;
 }
-
-.highlight{
-background:white;
-padding:22px;
-border-radius:12px;
-border:1px solid #e2e8f0;
-}
-
-/* SECTIONS */
-
-section{
-max-width:1050px;
-margin:auto;
-padding:80px 20px;
-}
-
-h2{
-font-size:30px;
-margin-bottom:28px;
-color:#1e3a8a;
-}
-
-/* CARD */
 
 .card{
 background:white;
-padding:32px;
+padding:26px;
 border-radius:14px;
 border:1px solid #e2e8f0;
-margin-top:25px;
 }
 
 .card strong{
@@ -151,20 +110,37 @@ color:#1e3a8a;
 font-size:18px;
 }
 
-/* SKILLS */
+/* HEADINGS */
 
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:18px;
-margin-top:25px;
+h2{
+font-size:30px;
+color:#1e3a8a;
+margin-bottom:10px;
 }
+
+.section-intro{
+color:#475569;
+max-width:650px;
+}
+
+/* SKILLS */
 
 .skill{
 background:white;
-border:1px solid #e2e8f0;
 padding:18px;
 border-radius:10px;
+border:1px solid #e2e8f0;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:18px;
+margin:8px;
 }
 
 /* MOBILE */
@@ -172,13 +148,7 @@ border-radius:10px;
 @media(max-width:768px){
 
 .hero h1{
-font-size:40px;
-}
-
-nav{
-gap:16px;
-flex-wrap:wrap;
-font-size:14px;
+font-size:38px;
 }
 
 }
@@ -200,9 +170,9 @@ font-size:14px;
 </header>
 
 
-<!-- HERO -->
+<!-- HERO / ABOUT -->
 
-<div class="hero">
+<section id="about" class="section hero">
 
 <h1>Natalie Lau</h1>
 
@@ -211,56 +181,59 @@ Aspiring Technology Professional | Applied Computing & FinTech
 </div>
 
 <p>
-Technology-focused student with enterprise internship experience in business analysis, system testing, and automation. Passionate about applied computing and fintech, with a strong interest in building practical solutions that enhance operational efficiency and user experience.
+Technology-focused student with enterprise internship experience in business analysis, automation, and system testing. Passionate about building practical solutions that enhance operational efficiency and user experience.
 </p>
 
-<a href="#contact" class="cta">Connect With Me</a>
+<div class="grid">
 
-
-<div class="highlights">
-
-<div class="highlight">
+<div class="card">
 <strong>Enterprise Internship</strong>
 <p>1-Year Business System Analyst Intern at NCS</p>
 </div>
 
-<div class="highlight">
+<div class="card">
 <strong>Automation Experience</strong>
-<p>UiPath & Power Automate Projects</p>
+<p>UiPath & Power Automate</p>
 </div>
 
-<div class="highlight">
+<div class="card">
 <strong>Leadership</strong>
 <p>Vice President, Modern Dance CCA</p>
 </div>
 
-<div class="highlight">
+<div class="card">
 <strong>FinTech Education</strong>
 <p>Diploma in Business & Financial Technology</p>
 </div>
 
 </div>
 
-</div>
+</section>
 
 
 <!-- EXPERIENCE -->
 
-<section id="experience">
+<section id="experience" class="section">
 
 <h2>Professional Experience</h2>
+<p class="section-intro">
+Enterprise exposure supporting business-critical systems within a large-scale technology environment.
+</p>
+
+<div class="grid">
 
 <div class="card">
-
 <strong>Business System Analyst Intern — NCS</strong>
 
 <ul>
-<li>Coordinated production issue resolution through System Integration Testing (SIT) and User Acceptance Testing (UAT) support.</li>
-<li>Served as person-in-charge for annual security and audit testing.</li>
-<li>Automated manual workflows using Power Automate to improve efficiency.</li>
-<li>Managed user incidents and service requests to ensure operational continuity.</li>
-<li>Collaborated with developers and consultants to deliver effective solutions.</li>
+<li>Performed SIT and supported UAT to ensure system reliability.</li>
+<li>Led annual security and audit testing.</li>
+<li>Automated workflows using Power Automate.</li>
+<li>Resolved user incidents and service requests.</li>
+<li>Collaborated with developers and consultants.</li>
 </ul>
+
+</div>
 
 </div>
 
@@ -269,17 +242,21 @@ Technology-focused student with enterprise internship experience in business ana
 
 <!-- SKILLS -->
 
-<section id="skills">
+<section id="skills" class="section">
 
 <h2>Technical & Professional Skills</h2>
 
-<div class="skills">
+<div class="grid">
 
-<div class="skill"><strong>Languages:</strong> Python, SQL, JavaScript, C#, HTML</div>
-<div class="skill"><strong>Tools:</strong> ServiceNow, UiPath, Power Automate, MySQL, VS Code</div>
-<div class="skill"><strong>Web Development:</strong> HTML, CSS, Bootstrap, Jinja</div>
-<div class="skill"><strong>Testing:</strong> SIT, UAT, Security Testing</div>
-<div class="skill"><strong>Core Strengths:</strong> Business Analysis, Problem Solving, Stakeholder Communication</div>
+<div class="skill"><strong>Languages:</strong><br>Python, SQL, JavaScript, C#, HTML</div>
+
+<div class="skill"><strong>Tools:</strong><br>ServiceNow, UiPath, Power Automate, MySQL, VS Code</div>
+
+<div class="skill"><strong>Web Development:</strong><br>Flask, Bootstrap, Jinja</div>
+
+<div class="skill"><strong>Testing:</strong><br>SIT, UAT, Security Testing</div>
+
+<div class="skill"><strong>Core Strengths:</strong><br>Business Analysis, Problem Solving, Stakeholder Communication</div>
 
 </div>
 
@@ -288,33 +265,29 @@ Technology-focused student with enterprise internship experience in business ana
 
 <!-- PROJECTS -->
 
-<section id="projects">
+<section id="projects" class="section">
 
 <h2>Selected Projects</h2>
 
+<div class="grid">
+
 <div class="card">
-
 <strong>QuickHire — Job Matching Platform</strong>
-<p><b>Tech Stack:</b> HTML, CSS, JavaScript, GitHub</p>
-<p>
-Developed a web platform matching users to short-term jobs based on availability and proximity, featuring a dual-review system to improve hiring transparency.
-</p>
+<p><b>Stack:</b> HTML, CSS, JavaScript</p>
+<p>Built a platform matching users to short-term jobs with a dual-review system to improve hiring transparency.</p>
+</div>
 
-<br>
-
+<div class="card">
 <strong>Vitality Vision — RPA Automation</strong>
-<p><b>Tech Stack:</b> UiPath</p>
-<p>
-Designed a Process Design Document and built an attended bot to automate medical data workflows, reducing manual administrative effort.
-</p>
+<p><b>Stack:</b> UiPath</p>
+<p>Developed an attended bot and process documentation to automate medical data workflows.</p>
+</div>
 
-<br>
-
-<strong>Bob the Recycler — Sustainable E-Commerce Platform</strong>
-<p><b>Tech Stack:</b> Python Flask, Bootstrap, Jinja</p>
-<p>
-Built customer and staff interfaces including product catalog, shopping cart, dashboard, and order history.
-</p>
+<div class="card">
+<strong>Bob the Recycler — E-Commerce Platform</strong>
+<p><b>Stack:</b> Python Flask, Bootstrap, Jinja</p>
+<p>Created customer and staff interfaces including catalog, cart, dashboard, and order history.</p>
+</div>
 
 </div>
 
@@ -323,19 +296,21 @@ Built customer and staff interfaces including product catalog, shopping cart, da
 
 <!-- LEADERSHIP -->
 
-<section id="leadership">
+<section id="leadership" class="section">
 
 <h2>Leadership & Activities</h2>
 
+<div class="grid">
+
 <div class="card">
-
 <strong>Vice President — Modern Dance CCA</strong>
-<p>Previously served as EXCO member; led event planning and coordinated logistics for school performances.</p>
+<p>Previously EXCO member; led event planning and coordinated logistics for performances.</p>
+</div>
 
-<br>
-
+<div class="card">
 <strong>Volunteer — Community Food Distribution</strong>
-<p>Supported donation drives and distributed meals to individuals and families in need.</p>
+<p>Organized donations and distributed meals to individuals and families in need.</p>
+</div>
 
 </div>
 
@@ -344,7 +319,7 @@ Built customer and staff interfaces including product catalog, shopping cart, da
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section id="contact" class="section contact">
 
 <h2>Contact</h2>
 
