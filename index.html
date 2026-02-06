@@ -10,17 +10,13 @@
 
 <style>
 
-/* COLOR SYSTEM */
-
 :root{
 --primary:#2563eb;
 --text:#0f172a;
 --muted:#64748b;
 --border:#e5e7eb;
---bg:#fafafa;
+--bg:#ffffff;
 }
-
-/* GLOBAL */
 
 *{
 box-sizing:border-box;
@@ -30,7 +26,7 @@ body{
 margin:0;
 font-family:'Inter',sans-serif;
 color:var(--text);
-background:white;
+background:var(--bg);
 }
 
 /* LAYOUT */
@@ -40,7 +36,7 @@ display:flex;
 min-height:100vh;
 }
 
-/* LEFT PANEL */
+/* LEFT */
 
 .left{
 width:38%;
@@ -52,7 +48,6 @@ border-right:1px solid var(--border);
 display:flex;
 flex-direction:column;
 justify-content:center;
-background:#fcfcfc;
 }
 
 .left h1{
@@ -64,24 +59,22 @@ letter-spacing:-1px;
 .tagline{
 color:var(--primary);
 font-weight:600;
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
 .bio{
 color:var(--muted);
 line-height:1.7;
-margin-bottom:40px;
+margin-bottom:35px;
 }
-
-/* NAV */
 
 .nav a{
 display:block;
 text-decoration:none;
 color:var(--muted);
 margin:10px 0;
-transition:.2s;
 font-weight:500;
+transition:.2s;
 }
 
 .nav a:hover{
@@ -89,7 +82,7 @@ color:var(--primary);
 transform:translateX(4px);
 }
 
-/* RIGHT PANEL */
+/* RIGHT */
 
 .right{
 width:62%;
@@ -97,12 +90,12 @@ padding:70px 80px;
 }
 
 section{
-margin-bottom:70px;
+margin-bottom:75px;
 }
 
 h2{
 font-size:26px;
-margin-bottom:18px;
+margin-bottom:20px;
 }
 
 /* CARD */
@@ -120,8 +113,6 @@ box-shadow:0 10px 25px rgba(0,0,0,.05);
 transform:translateY(-4px);
 }
 
-/* Highlight experience */
-
 .highlight{
 border-left:4px solid var(--primary);
 }
@@ -136,7 +127,7 @@ gap:10px;
 
 .skill{
 border:1px solid var(--border);
-padding:6px 12px;
+padding:7px 13px;
 border-radius:8px;
 font-size:14px;
 }
@@ -182,7 +173,7 @@ padding:50px 28px;
 
 <div class="wrapper">
 
-<!-- LEFT SIDE -->
+<!-- LEFT PANEL -->
 
 <div class="left">
 
@@ -193,15 +184,15 @@ Aspiring Technology Professional | FinTech
 </div>
 
 <div class="bio">
-Business & Financial Technology student with enterprise internship experience in business analysis and application support. Passionate about leveraging technology to improve workflows and build impactful digital solutions.
+Business & Financial Technology student with enterprise internship experience in business analysis and automation. Passionate about leveraging technology to improve systems, streamline workflows, and deliver meaningful operational impact.
 </div>
 
 <div class="nav">
-<a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
 <a href="#education">Education</a>
+<a href="#work">Work Experience</a>
 <a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
 </div>
@@ -209,22 +200,15 @@ Business & Financial Technology student with enterprise internship experience in
 </div>
 
 
-<!-- RIGHT SIDE -->
+<!-- RIGHT PANEL -->
 
 <div class="right">
 
-<section id="about">
-<h2>About Me</h2>
 
-<p>
-I am driven by analytical thinking and structured problem-solving, with strong interests in applied computing and financial technology. Through enterprise exposure and academic projects, I have developed adaptability, independence, and the confidence to thrive in fast-paced environments.
-</p>
-</section>
-
-
+<!-- EXPERIENCE -->
 
 <section id="experience">
-<h2>Professional Experience</h2>
+<h2>Internship Experience</h2>
 
 <div class="card highlight">
 
@@ -232,11 +216,11 @@ I am driven by analytical thinking and structured problem-solving, with strong i
 Apr 2025 – Mar 2026
 
 <ul>
-<li>Resolved user incidents, Service Requests, and Change Requests using ServiceNow and Excel.</li>
-<li>Supported SIT, UAT, and Security & Audit Testing.</li>
-<li>Automated workflows with Power Automate to improve efficiency.</li>
-<li>Documented test cases and collaborated with cross-functional teams.</li>
-<li>Entrusted to independently manage security and audit testing.</li>
+<li>Managed user queries, Service Requests, and Change Requests via ServiceNow, ensuring timely resolution.</li>
+<li>Executed System Integration Testing (SIT), supported UAT, and conducted Security & Audit Testing to maintain system reliability.</li>
+<li>Streamlined manual workflows by implementing automation using Power Automate.</li>
+<li>Produced clear test documentation and collaborated cross-functionally.</li>
+<li>Entrusted to independently handle Security & Audit Testing.</li>
 </ul>
 
 </div>
@@ -244,66 +228,86 @@ Apr 2025 – Mar 2026
 
 
 
+<!-- PROJECTS -->
+
 <section id="projects">
 <h2>Projects</h2>
 
 <div class="card">
-<strong>QuickHire — Job Matching Platform</strong>
+
+<strong>Vitality Vision — RPA Automation</strong>
 
 <p>
-Developed a web platform matching individuals to part-time jobs based on availability, proximity, and real-time demand while promoting transparency through a dual-review system.
+Designed a comprehensive Process Design Document and developed a UiPath bot to automate medical data workflows, improving operational efficiency and reducing manual processing.
 </p>
 
-<b>Tools:</b> GitHub, Visual Studio Code
+<b>Tools:</b> UiPath
+
 </div>
 
-
 <div class="card">
-<strong>Bob the Recycler — Sustainability Platform</strong>
+
+<strong>QuickHire — Job Matching Web Platform</strong>
 
 <p>
-Built a full-stack website promoting sustainable practices with customer shopping features and staff dashboards.
+Built a web platform matching users to short-term jobs based on availability and location, featuring a two-way review system for employers and employees to enhance transparency.
 </p>
 
-<b>Tools:</b> Python Flask, Bootstrap, jQuery
+<b>Tools:</b> GitHub, VS Code
+
 </div>
 
 </section>
 
 
+
+<!-- SKILLS -->
 
 <section id="skills">
 <h2>Technical Skills</h2>
 
 <div class="skills">
+
 <div class="skill">Python</div>
 <div class="skill">SQL</div>
 <div class="skill">JavaScript</div>
 <div class="skill">C#</div>
-<div class="skill">HTML/CSS</div>
-<div class="skill">MySQL</div>
-<div class="skill">UiPath</div>
+<div class="skill">HTML</div>
+
+<div class="skill">UiPath Studio</div>
 <div class="skill">ServiceNow</div>
 <div class="skill">Power Automate</div>
-<div class="skill">Business Analysis</div>
-<div class="skill">System Testing</div>
+<div class="skill">MySQL</div>
+<div class="skill">VS Code</div>
+<div class="skill">GitHub</div>
+
+<div class="skill">RPA</div>
+<div class="skill">System Integration Testing</div>
+<div class="skill">UAT Support</div>
+<div class="skill">Database Design</div>
+
 </div>
 
 </section>
 
 
+
+<!-- EDUCATION -->
 
 <section id="education">
 <h2>Education</h2>
 
 <div class="card">
 
-<strong>Diploma in Business & Financial Technology — Nanyang Polytechnic</strong><br>
+<strong>Nanyang Polytechnic</strong><br>
+Diploma in Business & Financial Technology  
 Apr 2023 – May 2026
 
 <p>
-Relevant Modules: Database Management, Business Analytics, Robotic Process Automation, Web Development
+Relevant Modules: Database Management, Business Analytics, Robotic Process Automation (RPA), Web Development
 </p>
+
+<br>
 
 <strong>Beatty Secondary School</strong><br>
 2019 – 2022
@@ -314,24 +318,28 @@ Relevant Modules: Database Management, Business Analytics, Robotic Process Autom
 
 
 
-<section id="leadership">
-<h2>Leadership & Activities</h2>
+<!-- WORK -->
+
+<section id="work">
+<h2>Work Experience</h2>
 
 <div class="card">
 
-<strong>Modern Dance CCA</strong><br>
-Vice President (2021–2022) • EXCO (2020–2021)
+<strong>Barista — KOI</strong>  
+Aug 2023 – Present
 
 <ul>
-<li>Led event planning and coordinated logistics for performances.</li>
-<li>Collaborated with committee members to support operations.</li>
+<li>Delivered high-quality customer service in a fast-paced environment.</li>
+<li>Collaborated within a team to maintain operational efficiency.</li>
 </ul>
 
-<strong>Volunteer — Community Food Distribution</strong><br>
-2019–2020
+<br>
+
+<strong>Event Helper</strong>  
+Dec 2022 – Jun 2023
 
 <ul>
-<li>Collected donations and distributed meals to families in need.</li>
+<li>Supported event logistics and operations while demonstrating reliability and teamwork.</li>
 </ul>
 
 </div>
@@ -340,13 +348,45 @@ Vice President (2021–2022) • EXCO (2020–2021)
 
 
 
+<!-- LEADERSHIP -->
+
+<section id="leadership">
+<h2>Leadership & Activities</h2>
+
+<div class="card">
+
+<strong>Modern Dance CCA — Beatty Secondary School</strong><br>
+Vice President (2021–2022) • EXCO Member (2020–2021)
+
+<ul>
+<li>Led event planning and coordinated logistics for performances and school activities.</li>
+<li>Collaborated with committee members to manage operations and support team initiatives.</li>
+</ul>
+
+<br>
+
+<strong>Volunteer — Community Food Distribution</strong>  
+2019 – 2020
+
+<ul>
+<li>Collected donations and distributed meals to individuals with disabilities and families in need.</li>
+</ul>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
 <section id="contact">
 <h2>Contact</h2>
 
 <p>Email: your@email.com</p>
 
 <p>
-LinkedIn:  
+LinkedIn:
 <a href="https://www.linkedin.com/in/natalie-lau-3172322b3/" target="_blank">
 linkedin.com/in/natalie-lau
 </a>
@@ -357,7 +397,6 @@ linkedin.com/in/natalie-lau
 </section>
 
 </div>
-
 </div>
 
 </body>
