@@ -22,129 +22,105 @@
 
 /* GLOBAL */
 
-html{
-scroll-behavior:smooth;
+*{
+box-sizing:border-box;
 }
 
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:var(--bg);
 color:var(--text);
-line-height:1.75;
-}
-
-/* NAVBAR */
-
-header{
-position:fixed;
-top:0;
-width:100%;
 background:white;
-border-bottom:1px solid var(--border);
-z-index:999;
 }
 
-nav{
-max-width:1080px;
-margin:auto;
+/* LAYOUT */
+
+.wrapper{
 display:flex;
+min-height:100vh;
+}
+
+/* LEFT PANEL */
+
+.left{
+width:38%;
+padding:80px 60px;
+position:sticky;
+top:0;
+height:100vh;
+border-right:1px solid var(--border);
+display:flex;
+flex-direction:column;
 justify-content:center;
-gap:40px;
-padding:18px;
-font-weight:500;
+background:#fcfcfc;
 }
 
-nav a{
-text-decoration:none;
-color:var(--text);
-transition:.25s;
-}
-
-nav a:hover{
-color:var(--primary);
-}
-
-/* HERO */
-
-.hero{
-padding-top:170px;
-padding-bottom:110px;
-max-width:820px;
-margin:auto;
-text-align:center;
-}
-
-.hero h1{
-font-size:60px;
-margin-bottom:6px;
+.left h1{
+font-size:46px;
+margin-bottom:10px;
 letter-spacing:-1px;
 }
 
-.subtitle{
-font-size:20px;
+.tagline{
 color:var(--primary);
 font-weight:600;
 margin-bottom:22px;
 }
 
-.hero p{
-font-size:18px;
+.bio{
 color:var(--muted);
+line-height:1.7;
+margin-bottom:40px;
 }
 
-/* SECTIONS */
+/* NAV */
+
+.nav a{
+display:block;
+text-decoration:none;
+color:var(--muted);
+margin:10px 0;
+transition:.2s;
+font-weight:500;
+}
+
+.nav a:hover{
+color:var(--primary);
+transform:translateX(4px);
+}
+
+/* RIGHT PANEL */
+
+.right{
+width:62%;
+padding:70px 80px;
+}
 
 section{
-max-width:880px;
-margin:auto;
-padding:85px 20px;
+margin-bottom:70px;
 }
 
 h2{
-font-size:30px;
-margin-bottom:28px;
-position:relative;
-}
-
-h2:after{
-content:"";
-width:50px;
-height:3px;
-background:var(--primary);
-position:absolute;
-left:0;
-bottom:-8px;
-border-radius:2px;
+font-size:26px;
+margin-bottom:18px;
 }
 
 /* CARD */
 
 .card{
-background:white;
-padding:30px;
-border-radius:14px;
 border:1px solid var(--border);
-box-shadow:0 6px 20px rgba(0,0,0,.04);
-margin-top:24px;
+border-radius:12px;
+padding:24px;
+margin-top:18px;
 transition:.25s;
 }
 
 .card:hover{
-transform:translateY(-5px);
-box-shadow:0 14px 32px rgba(0,0,0,.06);
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+transform:translateY(-4px);
 }
 
-.card strong{
-color:var(--text);
-font-size:18px;
-}
-
-.card p{
-color:var(--muted);
-}
-
-/* HIGHLIGHT EXPERIENCE */
+/* Highlight experience */
 
 .highlight{
 border-left:4px solid var(--primary);
@@ -153,53 +129,48 @@ border-left:4px solid var(--primary);
 /* SKILLS */
 
 .skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
-margin-top:25px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .skill{
-background:white;
 border:1px solid var(--border);
-padding:16px;
-border-radius:10px;
-text-align:center;
-transition:.2s;
+padding:6px 12px;
+border-radius:8px;
+font-size:14px;
 }
 
-.skill:hover{
-transform:translateY(-3px);
-}
+/* LINKS */
 
-/* CONTACT */
-
-.contact a{
-text-decoration:none;
+a{
 color:var(--primary);
-font-weight:500;
+text-decoration:none;
 }
 
-.contact a:hover{
+a:hover{
 text-decoration:underline;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:1000px){
 
-.hero h1{
-font-size:42px;
+.wrapper{
+flex-direction:column;
 }
 
-nav{
-gap:18px;
-flex-wrap:wrap;
-font-size:14px;
+.left{
+position:relative;
+width:100%;
+height:auto;
+border-right:none;
+border-bottom:1px solid var(--border);
 }
 
-section{
-padding:65px 18px;
+.right{
+width:100%;
+padding:50px 28px;
 }
 
 }
@@ -209,8 +180,23 @@ padding:65px 18px;
 
 <body>
 
-<header>
-<nav>
+<div class="wrapper">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<h1>Natalie Lau</h1>
+
+<div class="tagline">
+Aspiring Technology Professional | FinTech
+</div>
+
+<div class="bio">
+Business & Financial Technology student with enterprise internship experience in business analysis and application support. Passionate about leveraging technology to improve workflows and build impactful digital solutions.
+</div>
+
+<div class="nav">
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
@@ -218,45 +204,26 @@ padding:65px 18px;
 <a href="#education">Education</a>
 <a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
-</nav>
-</header>
-
-
-<!-- HERO -->
-
-<div class="hero">
-
-<h1>Natalie Lau</h1>
-
-<div class="subtitle">
-Aspiring Technology Professional | Applied Computing & FinTech
 </div>
-
-<p>
-Business & Financial Technology student with enterprise internship experience in business analysis and application support. Passionate about leveraging technology to improve workflows, enhance systems, and build practical solutions that create real operational impact.
-</p>
 
 </div>
 
 
-<!-- ABOUT -->
+<!-- RIGHT SIDE -->
+
+<div class="right">
 
 <section id="about">
-
 <h2>About Me</h2>
 
 <p>
-I am driven by analytical thinking and structured problem-solving, with a growing interest in applied computing and financial technology. Through academic projects and enterprise exposure, I have developed adaptability, independence, and the confidence to thrive in fast-paced technology environments.
+I am driven by analytical thinking and structured problem-solving, with strong interests in applied computing and financial technology. Through enterprise exposure and academic projects, I have developed adaptability, independence, and the confidence to thrive in fast-paced environments.
 </p>
-
 </section>
 
 
 
-<!-- EXPERIENCE -->
-
 <section id="experience">
-
 <h2>Professional Experience</h2>
 
 <div class="card highlight">
@@ -266,83 +233,67 @@ Apr 2025 – Mar 2026
 
 <ul>
 <li>Resolved user incidents, Service Requests, and Change Requests using ServiceNow and Excel.</li>
-<li>Supported System Integration Testing (SIT), User Acceptance Testing (UAT), and Security & Audit Testing.</li>
-<li>Automated manual workflows with Power Automate to improve operational efficiency.</li>
+<li>Supported SIT, UAT, and Security & Audit Testing.</li>
+<li>Automated workflows with Power Automate to improve efficiency.</li>
 <li>Documented test cases and collaborated with cross-functional teams.</li>
 <li>Entrusted to independently manage security and audit testing.</li>
 </ul>
 
 </div>
-
 </section>
 
 
 
-<!-- PROJECTS -->
-
 <section id="projects">
-
 <h2>Projects</h2>
 
 <div class="card">
-
-<strong>QuickHire — Part-Time Job Matching Platform</strong>
+<strong>QuickHire — Job Matching Platform</strong>
 
 <p>
-Developed a web-based platform that matches individuals to job opportunities based on availability, proximity, and real-time demand while promoting transparency through a dual-review system.
+Developed a web platform matching individuals to part-time jobs based on availability, proximity, and real-time demand while promoting transparency through a dual-review system.
 </p>
 
-<p><b>Tools:</b> GitHub, Visual Studio Code</p>
-
+<b>Tools:</b> GitHub, Visual Studio Code
 </div>
 
 
 <div class="card">
-
 <strong>Bob the Recycler — Sustainability Platform</strong>
 
 <p>
-Built a full-stack website promoting sustainable practices with customer-facing shopping features and staff dashboards.
+Built a full-stack website promoting sustainable practices with customer shopping features and staff dashboards.
 </p>
 
-<p><b>Tools:</b> Python Flask, Bootstrap, jQuery, Jinja</p>
-
+<b>Tools:</b> Python Flask, Bootstrap, jQuery
 </div>
 
 </section>
 
 
 
-<!-- SKILLS -->
-
 <section id="skills">
-
 <h2>Technical Skills</h2>
 
 <div class="skills">
-
 <div class="skill">Python</div>
 <div class="skill">SQL</div>
 <div class="skill">JavaScript</div>
 <div class="skill">C#</div>
-<div class="skill">HTML & CSS</div>
+<div class="skill">HTML/CSS</div>
 <div class="skill">MySQL</div>
 <div class="skill">UiPath</div>
 <div class="skill">ServiceNow</div>
 <div class="skill">Power Automate</div>
 <div class="skill">Business Analysis</div>
 <div class="skill">System Testing</div>
-
 </div>
 
 </section>
 
 
 
-<!-- EDUCATION -->
-
 <section id="education">
-
 <h2>Education</h2>
 
 <div class="card">
@@ -354,8 +305,6 @@ Apr 2023 – May 2026
 Relevant Modules: Database Management, Business Analytics, Robotic Process Automation, Web Development
 </p>
 
-<br>
-
 <strong>Beatty Secondary School</strong><br>
 2019 – 2022
 
@@ -365,10 +314,7 @@ Relevant Modules: Database Management, Business Analytics, Robotic Process Autom
 
 
 
-<!-- LEADERSHIP -->
-
 <section id="leadership">
-
 <h2>Leadership & Activities</h2>
 
 <div class="card">
@@ -377,17 +323,15 @@ Relevant Modules: Database Management, Business Analytics, Robotic Process Autom
 Vice President (2021–2022) • EXCO (2020–2021)
 
 <ul>
-<li>Led event planning and coordinated logistics for performances and school activities.</li>
-<li>Collaborated with committee members to support smooth operations.</li>
+<li>Led event planning and coordinated logistics for performances.</li>
+<li>Collaborated with committee members to support operations.</li>
 </ul>
-
-<br>
 
 <strong>Volunteer — Community Food Distribution</strong><br>
 2019–2020
 
 <ul>
-<li>Collected donations and distributed meals to families and individuals in need.</li>
+<li>Collected donations and distributed meals to families in need.</li>
 </ul>
 
 </div>
@@ -396,24 +340,25 @@ Vice President (2021–2022) • EXCO (2020–2021)
 
 
 
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
+<section id="contact">
 <h2>Contact</h2>
 
 <p>Email: your@email.com</p>
 
 <p>
-LinkedIn:
+LinkedIn:  
 <a href="https://www.linkedin.com/in/natalie-lau-3172322b3/" target="_blank">
 linkedin.com/in/natalie-lau
 </a>
 </p>
 
-<p>Location: Singapore</p>
+<p>Singapore</p>
 
 </section>
+
+</div>
+
+</div>
 
 </body>
 </html>
